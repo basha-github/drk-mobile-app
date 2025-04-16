@@ -15,6 +15,22 @@ public class MobileController {
 	@Autowired
 	MobileService abc;
 	
+	/*
+	 * 
+	 * http://localhost:8080/bigc/mobile/add
+	 * 
+	 * {
+		    "imei": "samsung-543543",
+		    "brand": "Samsung",
+		    "model": "Galaxy112233",
+		    "price": 85000
+		}
+	 * 
+	 * method---->post
+	 * 
+	 * 
+	 */
+	
 	@PostMapping("/bigc/mobile/add")
 	public String addNewMobile(@RequestBody Mobile newMobile) {
 		
@@ -25,6 +41,20 @@ public class MobileController {
 		
 	}
 
+	
+	/*
+	 * http://localhost:8080/bigc/mobile/update
+	 * 
+	 * 
+	 * {
+		    "imei": "Viv0-imei-54654",
+		    "brand": "Vivo",
+		    "model": "Vivok34",
+		    "price": 55000
+        }	
+	 * 
+	 * method---->put
+	 */
 	@PutMapping("/bigc/mobile/update")
 	public String updateMobile(@RequestBody Mobile updatedMobile) {
 		
